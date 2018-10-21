@@ -941,9 +941,6 @@ class Context(object):
         """
         # Macro already exists
         if name in list(self.keys()):
-            if not issubclass(self[name], (plasTeX.NewCommand, plasTeX.Definition)):
-                if not issubclass(self[name], plasTeX.TheCounter):
-                    return
             macrolog.debug('redefining command "%s"', name)
 
         if nargs is None:
