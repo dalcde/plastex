@@ -76,3 +76,7 @@ Doc/plastex6.syn
 # pytest artifacts
 unittests/**/new/*
 unittests/**/*.paux
+
+# Forked build files
+*.bbl
+sources
