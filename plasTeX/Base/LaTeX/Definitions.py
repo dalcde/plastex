@@ -29,7 +29,13 @@ class newcommand(Command):
         self.ownerDocument.context.newcommand(*args, **kwargs)
 
 class renewcommand(newcommand):
-    pass
+    def invoke(self, tex):
+        self.parse(tex)
+        a = self.attributes
+        args = (a['name'], a['nargs'], a['definition'])
+        kwargs = {'opt':a['opt'], 'force': self.config["general"]["allow-redefine"]}
+        deflog.debug('command %s %s %s', *args)
+        self.ownerDocument.context.newcommand(*args, **kwargs)
 
 class providecommand(newcommand):
     pass
@@ -56,7 +62,13 @@ class newenvironment(Command):
         self.ownerDocument.context.newenvironment(*args, **kwargs)
 
 class renewenvironment(newenvironment):
-    pass
+    def invoke(self, tex):
+        self.parse(tex)
+        a = self.attributes
+        args = (a['name'], a['nargs'], a['begin'], a['end'])
+        kwargs = {'opt':a['opt'], 'force': self.config["general"]["allow-redefine"]}
+        deflog.debug('environment %s %s %s', *args)
+        self.ownerDocument.context.newenvironment(*args, **kwargs)
 
 
 #

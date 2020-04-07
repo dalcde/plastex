@@ -40,6 +40,12 @@ general['xml'] = BooleanOption(
     default = False,
 )
 
+general['allow-redefine'] = BooleanOption(
+    """ Allow redefining macros with python implementation """,
+    options = '--allow-redefine',
+    default = False,
+)
+
 def readconfig(file):
     """ Read a configuration file """
     if not os.path.isfile(file):

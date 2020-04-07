@@ -923,7 +923,7 @@ class Context(object):
         newclass = type(falsename, (plasTeX.IfFalse,), {'ifclass':ifclass})
         self.addGlobal(falsename, newclass)
 
-    def newcommand(self, name, nargs=0, definition=None, opt=None):
+    def newcommand(self, name, nargs=0, definition=None, opt=None, force=False):
         """
         Create a \\newcommand
 
@@ -933,6 +933,9 @@ class Context(object):
         definition -- string containing the LaTeX definition
         opt -- string containing the LaTeX code to use in the
             optional argument
+        force -- force redefining existing macro. By default, this function
+            does not redefine a macro if the macro was implemented in python.
+            If this argument is True, the macro will be redefined regardless.
 
         Examples::
             c.newcommand('bold', 1, r'\\textbf{#1}')
@@ -941,9 +944,10 @@ class Context(object):
         """
         # Macro already exists
         if name in list(self.keys()):
-            if not issubclass(self[name], (plasTeX.NewCommand, plasTeX.Definition)):
-                if not issubclass(self[name], plasTeX.TheCounter):
-                    return
+            if not force and\
+               not issubclass(self[name], (plasTeX.NewCommand, plasTeX.Definition)) and\
+               not issubclass(self[name], plasTeX.TheCounter):
+                return
             macrolog.debug('redefining command "%s"', name)
 
         if nargs is None:
@@ -962,7 +966,7 @@ class Context(object):
 
         self.addGlobal(name, newclass)
 
-    def newenvironment(self, name, nargs=0, def_before=None, def_after=None, opt=None):
+    def newenvironment(self, name, nargs=0, def_before=None, def_after=None, opt=None, force=False):
         """
         Create a \\newenvironment
 
@@ -975,6 +979,9 @@ class Context(object):
             environment
         opt -- string containing the LaTeX code to use in the
             optional argument
+        force -- force redefining existing macro. By default, this function
+            does not redefine a macro if the macro was implemented in python.
+            If this argument is True, the macro will be redefined regardless.
 
         Examples::
             c.newenvironment('mylist', 0, [r'\\begin{itemize}', r'\\end{itemize}'])
@@ -982,8 +989,8 @@ class Context(object):
         """
         # Macro already exists
         if name in list(self.keys()):
-            if not issubclass(self[name], (plasTeX.NewCommand,
-                                           plasTeX.Definition)):
+            if not force and\
+               not issubclass(self[name], (plasTeX.NewCommand, plasTeX.Definition)):
                 return
             macrolog.debug('redefining environment "%s"', name)
 

@@ -73,6 +73,15 @@ specifies the \program{kpsewhich} program to use to locate \LaTeX\
 files and packages.
 \end{configuration}
 
+\begin{configuration}{Allow redefine}
+\options{\longprogramopt{allow-redefine}}
+\config{general}{allow-redefine}
+\default{False}
+allow redefining macros with python implementation. By default,
+\var{\renewcommand} does not redefine a command if it has a python
+implementation.
+\end{configuration}
+
 \begin{configuration}{Renderer}
 \options{\longprogramopt{renderer=\optval{renderer-name}}}
 \config{general}{renderer}
