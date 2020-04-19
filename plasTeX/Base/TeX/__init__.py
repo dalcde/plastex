@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX.Base.TeX.Fonts import *
 from plasTeX.Base.TeX.Parameters import *

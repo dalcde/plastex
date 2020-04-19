@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 This package is dynamically generated.  It loads data from the ent.xml file.

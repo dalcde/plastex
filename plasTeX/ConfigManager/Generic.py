@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import re, os, copy
 from plasTeX.ConfigManager import BUILTIN, CODE, ENVIRONMENT

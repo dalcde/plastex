@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX.Packages.book import *
 from plasTeX.Packages import book

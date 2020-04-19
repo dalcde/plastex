@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX import Command
 from plasTeX.Tokenizer import Token, Other

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 r"""
 This package is not properly implemented.  The \ifthenelse command simply

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 This is a huge package!  Most of the commands are simply stubbed out

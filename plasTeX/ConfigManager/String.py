@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from collections import UserString
 from plasTeX.ConfigManager.Generic import GenericOption, DEFAULTS, GenericParser, GenericArgument

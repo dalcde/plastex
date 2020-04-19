@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX.DOM import Node, Text
 from plasTeX import encoding

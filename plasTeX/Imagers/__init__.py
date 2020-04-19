@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from pathlib import Path
 import os, time, tempfile, shutil, re, string, pickle

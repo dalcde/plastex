@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 These macros are actually taken from the T1 font encoding package, but 

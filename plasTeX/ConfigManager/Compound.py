@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import re
 from plasTeX.ConfigManager.Generic import GenericArgument

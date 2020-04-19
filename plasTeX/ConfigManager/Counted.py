@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX.ConfigManager.Generic import GenericArgument
 from plasTeX.ConfigManager.Boolean import BooleanOption

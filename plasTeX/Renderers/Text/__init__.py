@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX.Renderers import Renderer as BaseRenderer
 from plasTeX import encoding

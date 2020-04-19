@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 r"""
 This package is intentionally empty.  The \ifpdf command is implemented

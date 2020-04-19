@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from plasTeX.Base.LaTeX.Arrays import tabular
 from plasTeX import Command, DimenCommand, CountCommand, GlueCommand 
