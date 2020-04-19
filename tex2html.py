@@ -10,6 +10,7 @@ import os, shutil
 from distutils.dir_util import copy_tree, mkpath
 from tempfile import TemporaryDirectory
 
+import patch
 from plasTeX.Compile import run as run_
 from plasTeX.Config import config as config_base
 from NotesRenderer.Config import config as config_extra

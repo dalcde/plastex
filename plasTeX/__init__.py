@@ -1642,7 +1642,6 @@ class TheCounter(Command):
         # In this case, whenever a counter value comes out as a zero,
         # just hank it out.  This is especially useful in document classes
         # such as book and report which do this in the \thefigure format macro.
-        # Disabled since this messes things like 4.0.1 up
-        # t = re.sub(r'\b0[^\dA-Za-z]+', r'', t)
+        t = re.sub(r'\b0[^\dA-Za-z]+', r'', t)
 
         return tex.textTokens(t)
