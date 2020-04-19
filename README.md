@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Use `https://github.com/dalcde/tex2html` instead.
+
 # About
 This is a fork of `https://github.com/plastex/plastex` incorporating some
 changes from gerby-project and some of my own. This is intended to be
