@@ -196,6 +196,10 @@ class NewCommands(TestCase):
         output = [x for x in s]
         assert output[-1].str == 'A', output
 
+    def testRedefineUndefinedCommand(self):
+        s = TeX()
+        s.input(r'\foo\newcommand\foo{Foo}\foo')
+        assert s.parse().textContent == 'Foo'
 
 class Python(TestCase):
 
